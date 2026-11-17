@@ -1,0 +1,19 @@
+DESCRIPTION
+	Provides hex2rgb and rgb2hex utils to convert between color formats.
+
+EXAMPLES
+	$ rgb2hex 50,100,150
+	#326496
+	
+	$ rgb2hex 50 100 150 200
+	#326496C8
+
+	$ echo "#1234ABCD" | hex2rgb
+	18,52,171,205
+
+INSTALLATION
+	make
+	sudo make install
+
+LICENSE
+	MIT License
