@@ -4,7 +4,7 @@ BUILD = build
 TARGET = $(BUILD)/colorutils
 PREFIX = /usr/local/bin
 
-.PHONY: all install clean
+.PHONY: all install uninstall clean
 all: hex2rgb rgb2hex
 
 $(TARGET): main.c
@@ -22,6 +22,9 @@ install: $(TARGET)
 	install -m 755 "$(TARGET)" "$(PREFIX)/colorutils"
 	ln -sf colorutils "$(PREFIX)/hex2rgb"
 	ln -sf colorutils "$(PREFIX)/rgb2hex"
+
+uninstall:
+	rm -f "$(PREFIX)/colorutils" "$(PREFIX)/hex2rgb" "$(PREFIX)/rgb2hex"
 	
 clean:
 	rm -rf $(BUILD) hex2rgb rgb2hex

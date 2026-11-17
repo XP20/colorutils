@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
     else if (strcmp(name, "rgb2hex") == 0)
         goto rgb2hex;
     else
-        THROW("Unknown basename, valid values are 'hex2rgb' and 'rgb2hex'");
+        THROW("Unknown basename, valid values are 'hex2rgb' and 'rgb2hex'\n");
     return EXIT_FAILURE;
 
 hex2rgb:
